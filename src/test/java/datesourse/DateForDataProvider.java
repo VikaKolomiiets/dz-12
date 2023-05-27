@@ -79,6 +79,14 @@ import java.time.LocalDate;
                 {1945, 9, 20}};
         return objects;
     }
+    @DataProvider(name = "person-data-birth-death")
+        public static Object[][] setUpYearsMonthesDaysGetFullAge(){
+            Object[][] objects = {
+                    {1911, 10, 18, 2000, 9, 21},
+                    {1920, 11, 8, 2020, 1, 18},
+                    {1941, 9, 3, 2018, 1, 2}};
+            return objects;
+    }
 
 
 }
