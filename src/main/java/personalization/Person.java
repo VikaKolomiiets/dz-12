@@ -47,8 +47,8 @@ public abstract class Person {
     public void divorce(boolean isBackLastName, boolean isBackLastNamePartner) {
         this.checkIsAlive(this);;
         this.checkIsAlive(this.getPartner());
-        if (this.getStatus() != Status.IS_MARRIED){
-            throw new MerriedStatusException(this.firstName, this.lastName);
+        if (this.getStatus() != Status.IS_MARRIED || this.getPartner().getStatus() != Status.IS_MARRIED){
+            throw new MerriedStatusException("Check status for both partners", "1:" + this.getFirstName() + " 2:" + this.getPartner().getFirstName());
         }
         this.getPartner().setStatus(Status.IS_DIVORCED);
         this.setStatus(Status.IS_DIVORCED);

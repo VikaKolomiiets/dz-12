@@ -87,6 +87,11 @@ import java.time.LocalDate;
                     {1941, 9, 3, 2018, 1, 2}};
             return objects;
     }
+    @DataProvider(name = "data-true-divorce")
+        public static Object[][] setUpIsAgree(){
+        Object[][] objects = {{true}, {false}};
+        return objects;
+    }
 
 
 }
