@@ -70,6 +70,15 @@ import java.time.LocalDate;
         };
         return objects;
     }
+    @DataProvider(name = "person-data-full-age")
+        public static Object[][] setUpYearMonthDayDataGetFullAge(){
+        Object[][] objects = {
+                {1911, 10, 18},
+                {1939, 9, 30},
+                {1941, 9, 3},
+                {1945, 9, 20}};
+        return objects;
+    }
 
 
 }
